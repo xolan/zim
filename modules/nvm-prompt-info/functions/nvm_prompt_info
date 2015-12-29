@@ -1,0 +1,3 @@
+if [ ! -z "$(nvm_ls_current)" ] && [ ! "$(nvm_ls_current)" = "system" ]; then
+    echo "$(nvm_ls_current)"
+fi
