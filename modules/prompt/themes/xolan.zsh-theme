@@ -128,10 +128,7 @@ prompt_envs() {
     envs+=" nvm:$(nvm_prompt_info)"
   fi
 
-  if [ -n "${envs}" ]; then
-    prompt_segment blue ${PRIMARY_FG}
-    print -Pn "${envs} "
-  fi
+  [[ -n "${envs}" ]] && prompt_segment red ${PRIMARY_FG} "${envs} "
 }
 
 ## Main prompt
